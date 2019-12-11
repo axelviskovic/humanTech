@@ -5,8 +5,10 @@ const errorScreen = document.querySelector('.errorScreen')
 
 
 for(let i=0; i<ficheAnimal.length; i++){
-  ficheAnimal[i].style.width=(screen.width)/2+'px'
-  ficheAnimal[i].style.height=(screen.width)/2+'px'
+  ficheAnimal[i].style.width=(screen.width)/2.5+'px'
+  ficheAnimal[i].style.height=(screen.width)/2.5+'px'
+  ficheAnimal[i].style.transform='translate('+((50*i)-50)+'%,-50%)'
+  ficheAnimal[i].style.zIndex=100-i
 }
 
 // ERROR SCREEN
@@ -18,8 +20,8 @@ function testOrientation(){
   else{
     errorScreen.style.display='none'
     for(let i=0; i<ficheAnimal.length; i++){
-      ficheAnimal[i].style.width=(screen.width)/2+'px'
-      ficheAnimal[i].style.height=(screen.width)/2+'px'
+      ficheAnimal[i].style.width=(screen.width)/2.5+'px'
+      ficheAnimal[i].style.height=(screen.width)/2.5+'px'
     }
   }
 }
