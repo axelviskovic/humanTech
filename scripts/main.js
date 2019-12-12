@@ -18,3 +18,19 @@ window.addEventListener(
     testOrientation()
   }
 )
+
+// START
+
+const startScreen = document.querySelector('.startScreen')
+const buttonStart = document.querySelector('.buttonStart')
+const elementsDecorSavane = document.querySelectorAll('.backgroundSavaneContainer img') // TOUTES LES IMAGES DE SAVANE
+
+buttonStart.addEventListener(
+  'click',
+  ()=>{
+    startScreen.style.display='none'
+    for(let i=0; i<elementsDecorSavane.length; i++){
+      elementsDecorSavane[i].classList.add('animationPop')
+    }
+  }
+)

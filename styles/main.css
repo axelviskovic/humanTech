@@ -2,7 +2,6 @@ body{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(to left, #e58356,#fbb84d);
 }
 
 /* ERROR SCREEN */
@@ -28,11 +27,53 @@ body{
   font-size: 50px;
 }
 
+/* START SCREEN */
 
-.backgroundContainer{
+.startScreen{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.startScreen h1{
+  font-size: 28px;
+  color : white;
+  margin: 20px 130px;
+  text-align: center;
+}
+
+.buttonStart{
+  width : 150px;
+  height: 50px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonStart h2{
+  color : black;
+  font-size: 20px;
+}
+
+/* SAVANE */
+
+.backgroundSavaneContainer{
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.backgroundSavane{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #e58356,#fbb84d);
 }
 
 #nuages{
@@ -59,7 +100,7 @@ body{
   height: auto;
   bottom : 0%;
   z-index: 3;
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 
 #arbre{
@@ -69,7 +110,7 @@ body{
   bottom : 0%;
   left : 5%;
   z-index: 4;
-  animation-delay: 1s;
+  animation-delay: 1.2s;
 }
 
 #herbe{
@@ -79,13 +120,14 @@ body{
   bottom : 0%;
   left : 0%;
   z-index: 5;
-  animation-delay: 1.4s;
+  animation-delay: 1.6s;
 }
 
 .animationPop{
-  animation: animationPop 1s;
+  animation: animationPop 1.5s;
   animation-fill-mode: forwards;
   transform:rotateX(90deg);
+  animation-timing-function: cubic-bezier(0, 1, 1, 1.50);
 }
 
 @keyframes animationPop{
@@ -95,6 +137,67 @@ body{
   to{
     transform:rotateX(0deg);
   }
+}
+
+/* FERME */
+
+.backgroundFermeContainer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.backgroundFerme{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#97D6FF,white);
+}
+
+#nuages{
+  position: absolute;
+  width : 100%;
+  height: auto;
+  top : 0%;
+  z-index: 1;
+}
+
+#ground{
+  position: absolute;
+  width : 100%;
+  height: auto;
+  bottom : 0%;
+  z-index: 2;
+  animation-delay: 0.4s;
+}
+
+#barriere{
+  position: absolute;
+  width : auto;
+  height: 10%;
+  right : 50%;
+  bottom : 25%;
+  z-index: 3;
+  animation-delay: 0.8s;
+}
+
+#grange{
+  position: absolute;
+  width: auto;
+  height: 40%;
+  bottom : 20%;
+  left : 10%;
+  z-index: 4;
+  animation-delay: 0.8s;
+}
+
+#arbres{
+  position: absolute;
+  width: 25%;
+  height: auto;
+  bottom : 0%;
+  left : 0%;
+  z-index: 5;
+  animation-delay: 1.2s;
 }
 
 *{
