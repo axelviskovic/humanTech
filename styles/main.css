@@ -1,0 +1,103 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to left, #e58356,#fbb84d);
+}
+
+/* ERROR SCREEN */
+
+.errorScreen{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorScreen img{
+  width : 50%;
+  height: auto;
+}
+
+.errorScreen h1{
+  text-align: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+
+.backgroundContainer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#nuages{
+  position: absolute;
+  width : 100%;
+  height: auto;
+  top : 0%;
+  z-index: 1;
+}
+
+#colline{
+  position: absolute;
+  width : auto;
+  height: 80%;
+  right : 0%;
+  bottom : 0%;
+  z-index: 2;
+  animation-delay: 0.4s;
+}
+
+#ground{
+  position: absolute;
+  width : 100%;
+  height: auto;
+  bottom : 0%;
+  z-index: 3;
+  animation-delay: 0.6s;
+}
+
+#arbre{
+  position: absolute;
+  width: auto;
+  height: 70%;
+  bottom : 0%;
+  left : 5%;
+  z-index: 4;
+  animation-delay: 1s;
+}
+
+#herbe{
+  position: absolute;
+  width: 35%;
+  height: auto;
+  bottom : 0%;
+  left : 0%;
+  z-index: 5;
+  animation-delay: 1.4s;
+}
+
+.animationPop{
+  animation: animationPop 1s;
+  animation-fill-mode: forwards;
+  transform:rotateX(90deg);
+}
+
+@keyframes animationPop{
+  from{
+    transform:rotateX(90deg);
+  }
+  to{
+    transform:rotateX(0deg);
+  }
+}
+
+*{
+  margin:0px;
+  padding: 0px;
+}
