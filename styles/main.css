@@ -153,6 +153,12 @@ body{
   background: linear-gradient(#97D6FF,white);
 }
 
+@media screen and (orientation:portrait) {
+  .errorScreen{
+    display: flex;
+  }
+}
+
 #nuages{
   position: absolute;
   width : 100%;
