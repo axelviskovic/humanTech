@@ -1,6 +1,5 @@
 body{
   background-color: black;
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -50,6 +49,41 @@ body{
   left: 50%;
   top : 50%;
   transform: translate(-50%, -50%);
+}
+
+.photoAnimal{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  border: 5px solid #008319;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+
+.textAnimal{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  height: 40%;
+}
+
+.textAnimal p{
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.nameAnimal{
+  position: absolute;
+  left: 50%;
+  top: 15%;
+}
+
+.nameAnimal h1{
+  color: white;
+  font-size: 45px;
 }
 
 .current{
