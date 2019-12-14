@@ -9,22 +9,28 @@
   <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="errorScreen">
+    <!-- <div class="errorScreen">
       <img src="images/rotation.svg">
       <h1>Veuillez tourner votre téléphone pour continuer l'expérience dans les meilleurs conditions</h1>
-    </div>
+    </div> -->
     <div class="startScreen">
       <h1>Bienvenue ! Tu disposes d’un fusil et de 3 cartouches. Tu es libre d’en faire ce que tu veux !<h1>
       <div class="buttonStart">
         <h2>Compris !</h2>
       </div>
     </div>
-
     <div class="backgroundSavaneContainer">
         <div class="backgroundSavane"></div>
-        <div class="animalGif" id="elephant">
+        <div class="" id="elephantContainer">
+
           <img id="elephant" src="images/animaux/elephant.gif">
+          <img id="elephantMort" src="images/animaux/elephantMort.png">
         </div>
+        <div class="" id="lionContainer">
+          <img id="lion" src="images/animaux/lion.gif">
+          <img id="lionMort" src="images/animaux/lionMort.png">
+        </div>
+         <div class="zoneTir"></div><!--  Là ou le joueur tire s'il rate l'animal -->
         <div class='playerScreenContainer'>
           <div class="munitionsContainer">
             <img src="images/balle1.png">
@@ -51,6 +57,9 @@
       <img id="ground" src="images/ferme/ground.png">
     </div> -->
 
+
+  <audio id="musicSavane" src="audio/musicSavane.mp3">
+  <audio id="fusilSound" src="audio/fusil.mp3">
   <script src="scripts/main.js"></script>
   </body>
 </html>
