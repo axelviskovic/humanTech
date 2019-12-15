@@ -19,6 +19,17 @@
         <h2>Compris !</h2>
       </div>
     </div>
+    <div class='playerScreenContainer'>
+      <div class="munitionsContainer">
+        <img src="images/balle1.png">
+        <img class="empty" src="images/balle1Empty.png">
+        <img src="images/balle2.png">
+        <img class="empty" src="images/balle2Empty.png">
+        <img src="images/balle3.png">
+        <img class="empty" src="images/balle3Empty.png">
+      </div>
+    </div>
+    <div class="zoneTir"></div><!--  Là ou le joueur tire s'il rate l'animal -->
     <div class="backgroundSavaneContainer">
         <div class="backgroundSavane"></div>
         <div class="" id="elephantContainer">
@@ -30,17 +41,6 @@
           <img id="lion" src="images/animaux/lion.gif">
           <img id="lionMort" src="images/animaux/lionMort.png">
         </div>
-         <div class="zoneTir"></div><!--  Là ou le joueur tire s'il rate l'animal -->
-        <div class='playerScreenContainer'>
-          <div class="munitionsContainer">
-            <img src="images/balle1.png">
-            <img class="empty" src="images/balle1Empty.png">
-            <img src="images/balle2.png">
-            <img class="empty" src="images/balle2Empty.png">
-            <img src="images/balle3.png">
-            <img class="empty" src="images/balle3Empty.png">
-          </div>
-        </div>
         <img id="arbre" src="images/savane/arbre.png">
         <img id="herbe" src="images/savane/herbe.png">
         <img id="colline" src="images/savane/colline.png">
@@ -48,18 +48,19 @@
         <img id="ground" src="images/savane/ground.png">
     </div>
 
-    <!-- <div class="backgroundFermeContainer">
+    <div class="backgroundFermeContainer">
       <div class="backgroundFerme"></div>
       <img id="arbres" src="images/ferme/arbres.png">
       <img id="barriere" src="images/ferme/barriere.png">
       <img id="grange" src="images/ferme/grange.png">
       <img id="nuages" src="images/ferme/nuages.png">
       <img id="ground" src="images/ferme/ground.png">
-    </div> -->
+    </div>
 
 
   <audio id="musicSavane" src="audio/musicSavane.mp3">
   <audio id="fusilSound" src="audio/fusil.mp3">
+  <audio id="fusilEmptySound" src="audio/emptyGun.mp3">
   <script src="scripts/main.js"></script>
   </body>
 </html>
