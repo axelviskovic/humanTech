@@ -2,6 +2,7 @@ body{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  cursor:url('../images/viseur.png'), pointer;
 }
 
 /* ERROR SCREEN */
@@ -27,6 +28,13 @@ body{
   font-size: 50px;
 }
 
+@media screen and (orientation:portrait) {
+  .errorScreen{
+    display: flex;
+  }
+}
+
+
 /* START SCREEN */
 
 .startScreen{
@@ -37,6 +45,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
+  position: absolute;
 }
 
 .startScreen h1{
@@ -60,6 +70,106 @@ body{
 .buttonStart h2{
   color : black;
   font-size: 20px;
+}
+
+/* PLAYER SCREEN */
+
+.playerScreenContainer{
+  width : 100%;
+  height: 15%;
+  position: absolute;
+  bottom : 0%;
+  z-index: 80;
+  display: flex;
+  justify-content: space-between;
+  align-items : flex-end;
+}
+
+.munitionsContainer{
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: .8;
+}
+
+.munitionsContainer img{
+  width : auto;
+  height: 80%;
+}
+
+.empty{
+  display: none;
+}
+
+.zoneTir{
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  position: absolute;
+  bottom : 0%;
+  right : 0%;
+}
+
+/* ANIMALS */
+
+.animationMoving{
+  animation: animationMoving 20s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#elephantContainer{
+  position: absolute;
+  width : 50%;
+  height: 50%;
+  bottom : -5%;
+  z-index: 60;
+}
+
+#elephant{
+  width : 60%;
+  height: auto;
+}
+
+#elephantMort{
+  width : 60%;
+  height: auto;
+  display: none;
+}
+
+#lionContainer{
+  display: none;
+  position: absolute;
+  width : 50%;
+  height: 50%;
+  bottom : -5%;
+  z-index: 59;
+  animation-direction: reverse;
+}
+
+#lion{
+  width : 60%;
+  height: auto;
+}
+
+#lionMort{
+  width : 60%;
+  height: auto;
+  display: none;
+  transform: rotateX(180deg);
+}
+
+
+@keyframes animationMoving {
+  from{
+    left : -60%;
+  }
+  to{
+    left : 110%;
+  }
 }
 
 /* SAVANE */
@@ -109,7 +219,7 @@ body{
   height: 70%;
   bottom : 0%;
   left : 5%;
-  z-index: 4;
+  z-index: 40;
   animation-delay: 1.2s;
 }
 
@@ -119,7 +229,7 @@ body{
   height: auto;
   bottom : 0%;
   left : 0%;
-  z-index: 5;
+  z-index: 50;
   animation-delay: 1.6s;
 }
 
@@ -139,9 +249,26 @@ body{
   }
 }
 
+.animationDepop{
+  animation: animationDepop 1.5s;
+  animation-fill-mode: forwards;
+  transform:rotateX(0deg);
+  animation-timing-function : ease-in;
+}
+
+@keyframes animationDepop{
+  from{
+    transform:rotateX(0deg);
+  }
+  to{
+    transform:rotateX(90deg);
+  }
+}
+
 /* FERME */
 
 .backgroundFermeContainer{
+  display: none;
   width: 100%;
   height: 100%;
   position: relative;
@@ -151,12 +278,6 @@ body{
   width: 100%;
   height: 100%;
   background: linear-gradient(#97D6FF,white);
-}
-
-@media screen and (orientation:portrait) {
-  .errorScreen{
-    display: flex;
-  }
 }
 
 #nuages{
@@ -173,7 +294,7 @@ body{
   height: auto;
   bottom : 0%;
   z-index: 2;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 
 #barriere{
@@ -183,7 +304,7 @@ body{
   right : 50%;
   bottom : 25%;
   z-index: 3;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 
 #grange{
@@ -193,7 +314,7 @@ body{
   bottom : 20%;
   left : 10%;
   z-index: 4;
-  animation-delay: 0.8s;
+  animation-delay: 1.4s;
 }
 
 #arbres{
@@ -203,7 +324,7 @@ body{
   bottom : 0%;
   left : 0%;
   z-index: 5;
-  animation-delay: 1.2s;
+  animation-delay: 1.9s;
 }
 
 *{
