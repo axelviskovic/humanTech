@@ -4,6 +4,17 @@ const errorScreen = document.querySelector('.errorScreen')
 // WEIGHT = HEIGHT FICHES
 
 
+
+for(let i=0; i<ficheAnimal.length; i++){
+  ficheAnimal[i].addEventListener(
+    'click',
+    ()=>{
+      ficheAnimal[i].classList.add('current')
+    }
+  )
+}
+
+
 for(let i=0; i<ficheAnimal.length; i++){
   ficheAnimal[i].style.width=(screen.width)/2.5+'px'
   ficheAnimal[i].style.height=(screen.width)/2.5+'px'
