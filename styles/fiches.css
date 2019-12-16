@@ -4,6 +4,9 @@ body{
   height: 100vh;
   padding: 0;
   margin: 0;
+  font-family: 'Lilita One', cursive;
+  position: relative;
+  overflow-y: hidden;
 }
 
 /* ERROR SCREEN */
@@ -37,6 +40,16 @@ body{
 
 /* FICHES ANIMALES */
 
+.skull{
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+
+.skull img{
+  width: 20%;
+}
+
 .sliderFichesContainer{
   width: 100%;
   height: 100%;
@@ -47,8 +60,9 @@ body{
 
 .ficheAnimal{
   /* HEIGHT = WIDTH = 50% SCREEN-WIDTH */
-  border: 10px solid #008319;
-  background-color: black;
+  border: 7px solid #244f1a;
+  border-radius: 10%;
+  background-color: #f7e896;
   position: absolute;
   animation: test 5s;
   perspective: 3000px;
@@ -57,27 +71,50 @@ body{
   transform: translate(-50%, -50%);
 }
 
+/*
+.ficheAnimal img{
+  width: 90%;
+  margin-top: -10%;
+}
+*/
+
 .photoAnimal{
   position: absolute;
   left: 10%;
-  top: 10%;
-  border: 5px solid #008319;
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
+  top: 7%;
+}
+
+.photoAnimal img{
+  width: 250px;
+  width: 300px;
+  border-radius: 40%;
+  border : 5px solid #244f1a;
+  width: 40%;
+
+}
+
+.iconAnimal{
+  position: absolute;
+  left: 85%;
+  top: 6%;
+  opacity: 60%;
+}
+
+.iconAnimal img{
+  width: 55%;
 }
 
 .textAnimal{
   position: absolute;
   left: 10%;
-  top: 50%;
+  top: 45%;
   width: 80%;
   height: 40%;
 }
 
 .textAnimal p{
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 18px;
   text-align: justify;
 }
 
@@ -88,8 +125,9 @@ body{
 }
 
 .nameAnimal h1{
-  color: white;
+  color: black;
   font-size: 45px;
+  margin-left: 10%;
 }
 
 .current{
