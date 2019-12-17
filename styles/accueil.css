@@ -9,7 +9,7 @@ body{
 
 .container{
   position: relative;
-  top: 2%;
+  top: -8%;
 }
 
 
@@ -20,7 +20,7 @@ body{
 
 
 .title{
-  font-size: 60px;
+  font-size: 50px;
   margin-top: -70px;
 }
 
@@ -37,6 +37,10 @@ body{
   padding: 1%;
   margin-right: 4%;
   font-style: normal;
+}
+
+span{
+  color: #fcff5e;
 }
 
 .gif{
@@ -70,14 +74,29 @@ a{
   text-decoration: none;
 }
 
-.illustrations {
+.illustrationsHaut{
+  transform: scale(-1);
   display: flex;
   width: 100%;
-  margin-top: 3%;
+  margin-top: -3%;
 }
 
-.illustrations img{
+.illustrationsHaut img{
   flex-direction: row;
+  opacity: 0.5;
+}
+
+
+
+.illustrationsBas {
+  display: flex;
+  width: 100%;
+  margin-top: -7%;
+}
+
+.illustrationsBas img{
+  flex-direction: row;
+  opacity: 0.5;
 }
 
 
