@@ -21,12 +21,17 @@ buttonStart.addEventListener(
     for(let i=0; i<elementsDecorSavane.length; i++){
       elementsDecorSavane[i].classList.add('animationPop')
     }
-    let lionStartMove = setTimeout(lionStart,1000)
+    let lionStartMove = setTimeout(lionStart,9000)
     function lionStart(){
       lionContainer.style.display='block'
       lionContainer.classList.add('animationMoving')
     }
-    let changeBg=setTimeout(changeBackground,20000)
+    let oiseauStartMove = setTimeout(oiseauStart,10000)
+    function oiseauStart(){
+      oiseauContainer.style.display='block'
+      oiseauContainer.classList.add('animationMoving')
+    }
+    let changeBg=setTimeout(changeBackground,25000)
     function changeBackground(){
       for(let i=0; i<elementsDecorSavane.length; i++){
         elementsDecorSavane[i].classList.add('animationDepop')
@@ -47,6 +52,16 @@ buttonStart.addEventListener(
 function emptyGun(){
   fusilEmptySound.play()
   fusilEmptySound.currentTime=0
+}
+
+// ARGENT JOUEUR
+
+const argentJoueur = document.querySelector('.argentJoueur h1')
+
+let argent = 0
+
+function getMoney(){
+  argentJoueur.innerText=argent
 }
 
 // BALLES
@@ -91,27 +106,50 @@ let nbMunitions = 3,
 
 // ANIMALS MOVING
 
-const elephantContainer = document.querySelector('#elephantContainer')
-const elephant = document.querySelector('#elephant')
-const elephantMort = document.querySelector('#elephantMort')
-const lionContainer = document.querySelector('#lionContainer')
-const lion = document.querySelector('#lion')
-const lionMort = document.querySelector('#lionMort')
+// const elephantContainer = document.querySelector('#elephantContainer')
+// const elephant = document.querySelector('#elephant')
+// const elephantMort = document.querySelector('#elephantMort')
+// const oiseauContainer = document.querySelector('#oiseauContainer')
+// const oiseau = document.querySelector('#oiseau')
+// const oiseauMort = document.querySelector('#oiseauMort')
+// const lionContainer = document.querySelector('#lionContainer')
+// const lion = document.querySelector('#lion')
+// const lionMort = document.querySelector('#lionMort')
+// const suricateContainer = document.querySelector('#suricateContainer')
+// const suricate = document.querySelector('#suricate')
+// const suricateMort = document.querySelector('#suricateMort')
+// const terrier = document.querySelector('#terrier')
 
 elephant.addEventListener(
   'click',
   ()=>{
     if(nbMunitions>0){
       shoot()
+      argent=argent+600
+      getMoney()
       elephantContainer.style.left=elephantContainer.offsetLeft+'px'
       elephant.style.display='none'
       elephantMort.style.display='block'
       elephantContainer.classList.remove('animationMoving')
-      let disparition=setTimeout(opacityDecrease,2000)
-      function opacityDecrease(){
-        elephantContainer.style.transition='2s'
-        elephantContainer.style.opacity='0'
-      }
+    }
+    else{
+      emptyGun()
+    }
+  }
+)
+
+oiseau.addEventListener(
+  'click',
+  ()=>{
+    if(nbMunitions>0){
+      shoot()
+      argent=argent+360
+      getMoney()
+      oiseauContainer.style.left=oiseauContainer.offsetLeft+'px'
+      oiseau.style.display='none'
+      oiseauMort.style.display='block'
+      oiseauContainer.classList.remove('animationMoving')
+      oiseauContainer.classList.add('animationMortTombe')
     }
     else{
       emptyGun()
@@ -124,15 +162,12 @@ lion.addEventListener(
   ()=>{
     if(nbMunitions>0){
       shoot()
+      argent=argent+400
+      getMoney()
       lionContainer.style.left=lionContainer.offsetLeft+'px'
       lion.style.display='none'
       lionMort.style.display='block'
       lionContainer.classList.remove('animationMoving')
-      let disparition=setTimeout(opacityDecrease,2000)
-      function opacityDecrease(){
-        lionContainer.style.transition='2s'
-        lionContainer.style.opacity='0'
-      }
     }
     else{
       emptyGun()
@@ -140,9 +175,54 @@ lion.addEventListener(
   }
 )
 
+suricate.addEventListener(
+  'click',
+  ()=>{
+    if(nbMunitions>0){
+      shoot()
+      suricateVie=false
+      argent=argent+300
+      getMoney()
+      suricate.style.display='none'
+      terrier.style.display='none'
+      suricateMort.style.display='block'
+    }
+    else{
+      emptyGun()
+    }
+  }
+)
 
+let suricateVie=true
 
+let apparitionSuricate = setInterval(suricateApparition,6000)
+function suricateApparition(){
+  if(suricateVie==true){
+    suricate.style.display='block'
+    let wait = setInterval(waitSuricate,3200)
+    function waitSuricate(){
+      suricate.style.display='none'
+    }
+  }
+}
 
+singe.addEventListener(
+  'click',
+  ()=>{
+    if(nbMunitions>0){
+      shoot()
+      argent=argent+200
+      getMoney()
+      singeContainer.style.left=singeContainer.offsetLeft+'px'
+      singe.style.display='none'
+      singeMort.style.display='block'
+      singeContainer.classList.remove('animationMoving')
+    }
+    else{
+      emptyGun()
+    }
+  }
+)
   zoneTir.addEventListener(
     'click',
     ()=>{
