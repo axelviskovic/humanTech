@@ -63,3 +63,27 @@ window.addEventListener(
     }
   }
 )
+
+// SOUND
+
+const musiqueSavane = document.querySelector('#musiqueSavane')
+const soundButton = document.querySelector('#soundButton')
+const audioOff=document.querySelector('.audioOff')
+
+let musicPlaying=false
+
+soundButton.addEventListener(
+  "click",
+  ()=>{
+    if(musicPlaying==false){
+      musiqueSavane.play()
+      musicPlaying=true
+      audioOff.style.display="none"
+    }
+    else{
+      musiqueSavane.pause()
+      musicPlaying=false
+      audioOff.style.display="block"
+    }
+  }
+)

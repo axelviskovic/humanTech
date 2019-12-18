@@ -9,44 +9,44 @@ body{
   height: 100%;
 }
 
-#couple{
-  opacity: .8;
+#antilope{
+  opacity: 1;
+  transition: all 1s;
+  width : 25%;
+  height: auto;
+  position: absolute;
+  bottom : 5%;
+  right : 4%;
+}
+
+#lionroi{
+  opacity: 1;
   transition: all 1s;
   width : 10%;
   height: auto;
   position: absolute;
-  bottom : 42%;
-  right : 40%;
+  bottom : 0%;
+  right : 55%;
 }
 
-#guetteur{
-  opacity: .8;
+#lionennemi{
+  opacity: 1;
   transition: all 1s;
-  width : 5%;
+  width :  25%;
   height: auto;
   position: absolute;
-  bottom : 42%;
-  right : 70%;
+  bottom : 0%;
+  right : 25%;
 }
 
-#enfants{
-  opacity: .8;
+#lionnes{
+  opacity: 1;
   transition: all 1s;
-  width :  13%;
+  width :  30%;
   height: auto;
   position: absolute;
-  bottom : 21.5%;
-  right : 4%;
-}
-
-#chercheur{
-  opacity: .8;
-  transition: all 1s;
-  width :  16%;
-  height: auto;
-  position: absolute;
-  bottom : 12.5%;
-  right : 64%;
+  bottom : 0%;
+  right : 65%;
 }
 
 #text1{

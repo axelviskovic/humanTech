@@ -7,10 +7,10 @@ const text6 = document.querySelector('#text6')
 const text7 = document.querySelector('#text7')
 const text8 = document.querySelector('#text8')
 const indicationsContainer = document.querySelector('.indicationsContainer')
-const couple = document.querySelector('#couple')
-const enfants = document.querySelector('#enfants')
-const guetteur = document.querySelector('#guetteur')
-const chercheur = document.querySelector('#chercheur')
+const antilope = document.querySelector('#antilope')
+const lionroi = document.querySelector('#lionroi')
+const lionennemi = document.querySelector('#lionennemi')
+const lionnes = document.querySelector('#lionnes')
 
 
 let text = 1
@@ -35,8 +35,8 @@ window.addEventListener(
       text7.style.display='none'
       indicationsContainer.style.display='none'
       text8.classList.add('animationDefile')
-      chercheur.style.transform='scale(1)'
-      chercheur.style.opacity='.8'
+      lionnes.style.transform='scale(1)'
+      lionnes.style.opacity='.8'
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
         indicationsContainer.style.display='flex'
@@ -47,16 +47,16 @@ window.addEventListener(
       text6.style.display='none'
       indicationsContainer.style.display='none'
       text7.classList.add('animationDefile')
-      guetteur.style.transform='scale(1)'
-      guetteur.style.opacity='0.8'
+      lionennemi.style.transform='scale(1)'
+      lionennemi.style.opacity='0.8'
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
       let waiterGuetteur = setTimeout(waitGuetteur,1000)
       function waitGuetteur(){
-        chercheur.style.transform='scale(1.5)'
-        chercheur.style.opacity='1'
+        lionnes.style.transform='scale(1.5)'
+        lionnes.style.opacity='1'
       }
       text++
     }
@@ -64,12 +64,12 @@ window.addEventListener(
       text5.style.display='none'
       text6.classList.add('animationDefile')
       indicationsContainer.style.display='none'
-      enfants.style.transform='scale(1)'
-      enfants.style.opacity='0.8'
+      lionroi.style.transform='scale(1)'
+      lionroi.style.opacity='0.8'
       let waiterGuetteur = setTimeout(waitGuetteur,1000)
       function waitGuetteur(){
-        guetteur.style.transform='scale(1.5)'
-        guetteur.style.opacity='1'
+        lionennemi.style.transform='scale(1.5)'
+        lionennemi.style.opacity='1'
       }
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
@@ -81,12 +81,12 @@ window.addEventListener(
       text4.style.display='none'
       text5.classList.add('animationDefile')
       indicationsContainer.style.display='none'
-      couple.style.transform='scale(1)'
-      couple.style.opacity='0.8'
+      antilope.style.transform='scale(1)'
+      antilope.style.opacity='0.8'
       let waiter = setTimeout(waitSuricate,1000)
       function waitSuricate(){
-        enfants.style.transform='scale(1.5)'
-        enfants.style.opacity='1'
+        lionroi.style.transform='scale(1.5)'
+        lionroi.style.opacity='1'
       }
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
@@ -98,8 +98,8 @@ window.addEventListener(
       text3.style.display='none'
       indicationsContainer.style.display='none'
       text4.classList.add('animationDefile')
-      couple.style.transform='scale(1.5)'
-      couple.style.opacity='1'
+      antilope.style.transform='scale(1.5)'
+      antilope.style.opacity='1'
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
         indicationsContainer.style.display='flex'
