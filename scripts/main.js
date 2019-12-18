@@ -2,22 +2,12 @@
 
 // START
 
-const startScreen = document.querySelector('.startScreen')
-const buttonStart = document.querySelector('.buttonStart')
 const elementsDecorSavane = document.querySelectorAll('.backgroundSavaneContainer>img') // TOUTES LES IMAGES DE SAVANE
-const musicSavane = document.querySelector('#musicSavane')
 const fusilSound = document.querySelector('#fusilSound')
 const fusilEmptySound= document.querySelector('#fusilEmptySound')
-const elementsDecorFerme = document.querySelectorAll('.backgroundFermeContainer>img') // TOUTES LES IMAGES DE SAVANE
-const backgroundFermeContainer=document.querySelector('.backgroundFermeContainer')
-const backgroundSavaneContainer=document.querySelector('.backgroundSavaneContainer')
 
-buttonStart.addEventListener(
-  'click',
-  ()=>{
-    musicSavane.play()
+
     elephantContainer.classList.add('animationMoving')
-    startScreen.style.display='none'
     for(let i=0; i<elementsDecorSavane.length; i++){
       elementsDecorSavane[i].classList.add('animationPop')
     }
@@ -31,23 +21,6 @@ buttonStart.addEventListener(
       oiseauContainer.style.display='block'
       oiseauContainer.classList.add('animationMoving')
     }
-    let changeBg=setTimeout(changeBackground,25000)
-    function changeBackground(){
-      for(let i=0; i<elementsDecorSavane.length; i++){
-        elementsDecorSavane[i].classList.add('animationDepop')
-        let apparitionFerme = setTimeout(ferme,3000)
-        function ferme(){
-          backgroundSavaneContainer.style.display='none'
-          for(let i=0; i<elementsDecorFerme.length; i++){
-            backgroundFermeContainer.style.display='block'
-            elementsDecorFerme[i].classList.add('animationPop')
-          }
-        }
-      }
-    }
-
-  }
-)
 
 function emptyGun(){
   fusilEmptySound.play()
@@ -81,8 +54,10 @@ let nbMunitions = 3,
 
     function shoot(){
       if(nbMunitions>0){
-        fusilSound.play()
-        fusilSound.currentTime=0
+        if(musicPlaying==true){
+          fusilSound.play()
+          fusilSound.currentTime=0
+        }
         if(nbMunitions==1){
           balle3.style.display='none'
           balleEmpty3.style.display='block'
@@ -231,10 +206,26 @@ singe.addEventListener(
     }
   )
 
+  // SOUND
 
+const musiqueSavane = document.querySelector('#musiqueSavane')
+const soundButton = document.querySelector('#soundButton')
+const audioOff=document.querySelector('.audioOff')
 
+  let musicPlaying=false
 
-
-
-
-//a
+  soundButton.addEventListener(
+    "click",
+    ()=>{
+      if(musicPlaying==false){
+        musiqueSavane.play()
+        musicPlaying=true
+        audioOff.style.display="none"
+      }
+      else{
+        musiqueSavane.pause()
+        musicPlaying=false
+        audioOff.style.display="block"
+      }
+    }
+  )

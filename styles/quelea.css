@@ -55,8 +55,17 @@ body{
   50%{
     left : 30%;
   }
+  70%{
+    left : 50%;
+    transform: rotateY(0deg);
+  }
+  75%{
+    left : 45%;
+    transform: rotateY(180deg);
+  }
   100%{
-    left : 110%;
+    left : -10%;
+    transform: rotateY(180deg);
   }
 }
 
