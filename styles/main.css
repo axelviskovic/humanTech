@@ -3,6 +3,7 @@ body{
   height: 100vh;
   overflow: hidden;
   cursor:url('../images/viseur.png'), pointer;
+  font-family: 'Lilita One', cursive;
 }
 
 /* ERROR SCREEN */

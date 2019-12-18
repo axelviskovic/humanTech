@@ -1,40 +1,57 @@
 body{
   background: black;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   font-family: 'Lilita One', cursive;
-  overflow-y: hidden;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .container{
   position: relative;
-  top: 2%;
+  top: -8%;
 }
 
 
 .subTitle h3{
-  font-size: 25px;
-  color: #fcff5e;
+  font-size: 28px;
 }
 
 
 .title{
-  font-size: 60px;
-  margin-top: -70px;
+  font-size: 57px;
+  margin-top: -80px;
 }
+
+h1{
+    color: #e58356;
+}
+
 
 .description{
   display: flex;
   justify-content:center;
+  margin-top: -40px;
 }
 
 .paragraphe{
-  border: 4px solid white;
-  width: 400px;
+  width: 390px;
+  font-size: 23px;
+  border: 2px solid white;
   border-radius: 20px;
   padding: 1%;
   margin-right: 4%;
+  font-style: normal;
+}
+
+span{
+  color: #fbb84d;
+}
+
+#fusil{
+  color: red;
 }
 
 .gif{
@@ -43,8 +60,8 @@ body{
 
 .buttonNext{
   margin: 0 auto;
-  margin-top: 5%;
-  border: 4px solid #fcff5e;
+  margin-top: 3%;
+  border: 4px solid #fbb84d;
   width : 150px;
   height: 50px;
   background-color: black;
@@ -53,6 +70,8 @@ body{
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  animation: cliqueIci 1.6s infinite ease-out;
+  z-index: 3;
 }
 
 .buttonNext:hover{
@@ -68,18 +87,74 @@ a{
   text-decoration: none;
 }
 
-.illustrations {
+.illustrationsHaut{
   display: flex;
   width: 100%;
-  margin-top: 3%;
+  margin-left: -15%;
+  margin-top: -3%;
+  animation: ventHaut 8s infinite ease;
 }
 
-.illustrations img{
+.illustrationsHaut img{
   flex-direction: row;
+  opacity: 0.5;
+}
+
+
+
+.illustrationsBas {
+  display: flex;
+  width: 100%;
+  margin-top: -4%;
+  animation: ventBas 8s infinite ease;
+}
+
+.illustrationsBas img{
+  flex-direction: row;
+  opacity: 0.5;
 }
 
 
 .subTitle, .title, .description, .buttonNext{
   color: white;
   text-align: center;
+}
+
+
+@keyframes cliqueIci {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100{
+    transform: scale(1);
+  }
+}
+
+@keyframes ventHaut {
+  0%{
+    transform: translateX(100px);
+  }
+  50%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(100px);
+  }
+}
+
+
+
+@keyframes ventBas {
+  0%{
+    transform: translateX(-100px);
+  }
+  50%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(-100px);
+  }
 }
