@@ -5,10 +5,21 @@
 const elementsDecorSavane = document.querySelectorAll('.backgroundSavaneContainer>img') // TOUTES LES IMAGES DE SAVANE
 const fusilSound = document.querySelector('#fusilSound')
 const fusilEmptySound= document.querySelector('#fusilEmptySound')
+const finalScreen = document.querySelector('.finalScreen')
+const body=document.querySelector('body')
+const playMusic=document.querySelector('.playMusic')
+const containerPlayMusic=document.querySelector('.containerPlayMusic')
+const musiqueSavane = document.querySelector('#musiqueSavane')
 
 
+playMusic.addEventListener(
+  'click',
+  ()=>{
+    musiqueSavane.play()
+    containerPlayMusic.style.display='none'
     elephantContainer.classList.add('animationMoving')
     for(let i=0; i<elementsDecorSavane.length; i++){
+      elementsDecorSavane[i].style.display='block'
       elementsDecorSavane[i].classList.add('animationPop')
     }
     let lionStartMove = setTimeout(lionStart,9000)
@@ -21,6 +32,24 @@ const fusilEmptySound= document.querySelector('#fusilEmptySound')
       oiseauContainer.style.display='block'
       oiseauContainer.classList.add('animationMoving')
     }
+    let waiterFinalScreen=setTimeout(final,30000)
+    function final(){
+      body.style.opacity='1'
+      finalScreen.style.display='flex'
+      localStorage.setItem('animalsKilled',animalsKilled)
+      // Final SCREEN
+
+      const resultatArgent=document.querySelector('#resultatArgent')
+
+      if(animalsKilled.length==0){
+        resultatArgent.innerHTML='<h3>Félicitations, vous avez un coeur en <span class="orange">or</span> et un <span class="red">amour</span> sincère pour les animaux ! À présent vous pouvez voir commnent ces animaux vivent en société.</h3>'
+      }
+      else{
+        resultatArgent.innerHTML='<h3>Bravo, vous avez réussi à récolter <span class="orange">'+argent+'$ </span>en <span class="red">tuant</span> des animaux ! Mais savez-vous comment ces animaux vivent en société ?</h3>'
+      }
+    }
+  }
+)
 
 function emptyGun(){
   fusilEmptySound.play()
@@ -50,7 +79,7 @@ const balleEmpty3 = document.querySelector('.munitionsContainer>img:nth-child(6)
 
 
 let nbMunitions = 3,
-    currentAnimal = ''
+    animalsKilled=[]
 
     function shoot(){
       if(nbMunitions>0){
@@ -62,6 +91,25 @@ let nbMunitions = 3,
           balle3.style.display='none'
           balleEmpty3.style.display='block'
           nbMunitions--
+          body.style.opacity='0'
+          body.style.transition='all 1.4s'
+          let waiterFinalScreen=setTimeout(final,2000)
+          function final(){
+            body.style.opacity='1'
+            finalScreen.style.display='flex'
+            localStorage.setItem('animalsKilled',animalsKilled)
+            // Final SCREEN
+
+            const resultatArgent=document.querySelector('#resultatArgent')
+
+            if(animalsKilled.length==0){
+              resultatArgent.innerHTML='<h3>Félicitations, vous avez un coeur en <span class="orange">or</span> et un <span class="red">amour</span> sincère pour les animaux ! À présent vous pouvez voir commnent ces animaux vivent en société.</h3>'
+            }
+            else{
+              resultatArgent.innerHTML='<h3>Bravo, vous avez réussi à récolter <span class="orange">'+argent+'$ </span>en <span class="red">tuant</span> des animaux ! Mais savez-vous comment ces animaux vivent en société ?</h3>'
+            }
+          }
+
         }
         if(nbMunitions==2){
           balle2.style.display='none'
@@ -79,27 +127,12 @@ let nbMunitions = 3,
       }
     }
 
-// ANIMALS MOVING
-
-// const elephantContainer = document.querySelector('#elephantContainer')
-// const elephant = document.querySelector('#elephant')
-// const elephantMort = document.querySelector('#elephantMort')
-// const oiseauContainer = document.querySelector('#oiseauContainer')
-// const oiseau = document.querySelector('#oiseau')
-// const oiseauMort = document.querySelector('#oiseauMort')
-// const lionContainer = document.querySelector('#lionContainer')
-// const lion = document.querySelector('#lion')
-// const lionMort = document.querySelector('#lionMort')
-// const suricateContainer = document.querySelector('#suricateContainer')
-// const suricate = document.querySelector('#suricate')
-// const suricateMort = document.querySelector('#suricateMort')
-// const terrier = document.querySelector('#terrier')
-
 elephant.addEventListener(
   'click',
   ()=>{
     if(nbMunitions>0){
       shoot()
+      animalsKilled.push('elephant')
       argent=argent+600
       getMoney()
       elephantContainer.style.left=elephantContainer.offsetLeft+'px'
@@ -118,6 +151,7 @@ oiseau.addEventListener(
   ()=>{
     if(nbMunitions>0){
       shoot()
+      animalsKilled.push('quelea')
       argent=argent+360
       getMoney()
       oiseauContainer.style.left=oiseauContainer.offsetLeft+'px'
@@ -137,6 +171,7 @@ lion.addEventListener(
   ()=>{
     if(nbMunitions>0){
       shoot()
+      animalsKilled.push('lion')
       argent=argent+400
       getMoney()
       lionContainer.style.left=lionContainer.offsetLeft+'px'
@@ -155,6 +190,7 @@ suricate.addEventListener(
   ()=>{
     if(nbMunitions>0){
       shoot()
+      animalsKilled.push('suricate')
       suricateVie=false
       argent=argent+300
       getMoney()
@@ -186,6 +222,7 @@ singe.addEventListener(
   ()=>{
     if(nbMunitions>0){
       shoot()
+      animalsKilled.push('singe')
       argent=argent+200
       getMoney()
       singeContainer.style.left=singeContainer.offsetLeft+'px'
@@ -208,11 +245,10 @@ singe.addEventListener(
 
   // SOUND
 
-const musiqueSavane = document.querySelector('#musiqueSavane')
 const soundButton = document.querySelector('#soundButton')
 const audioOff=document.querySelector('.audioOff')
 
-  let musicPlaying=false
+  let musicPlaying=true
 
   soundButton.addEventListener(
     "click",
@@ -229,3 +265,11 @@ const audioOff=document.querySelector('.audioOff')
       }
     }
   )
+
+
+
+
+
+
+
+//A

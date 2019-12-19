@@ -11,6 +11,7 @@ const couple = document.querySelector('#couple')
 const enfants = document.querySelector('#enfants')
 const guetteur = document.querySelector('#guetteur')
 const chercheur = document.querySelector('#chercheur')
+const buttonRetourReplay=document.querySelector('.buttonRetourReplay')
 
 
 let text = 1
@@ -30,6 +31,8 @@ window.addEventListener(
       text8.style.display='none'
       indicationsContainer.style.display='none'
       text++
+      buttonRetourReplay.style.width='100%'
+      buttonRetourReplay.style.height='100%'
     }
     if(text==7 && indicationsContainer.style.display=='flex'){
       text7.style.display='none'
