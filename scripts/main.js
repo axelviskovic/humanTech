@@ -106,7 +106,7 @@ let nbMunitions = 3,
               resultatArgent.innerHTML='<h3>Félicitations, vous avez un coeur en <span class="orange">or</span> et un <span class="red">amour</span> sincère pour les animaux ! À présent vous pouvez voir commnent ces animaux vivent en société.</h3>'
             }
             else{
-              resultatArgent.innerHTML='<h3>Bravo, vous avez réussi à récolter <span class="orange">'+argent+'$ </span>en <span class="red">tuant</span> des animaux ! Mais savez-vous comment ces animaux vivent en société ?</h3>'
+              resultatArgent.innerHTML='<h3>Bravo, vous avez réussi à récolter <span class="orange">'+argent+'$ </span>en <span class="red">tuant</span> des animaux innocents ! Mais savez-vous comment ces animaux vivent en société ?</h3>'
             }
           }
 
