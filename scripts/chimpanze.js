@@ -38,6 +38,8 @@ window.addEventListener(
       indicationsContainer.style.display='none'
       kingchimpanze.style.transform='scale(1.3)'
       kingchimpanze.style.opacity='1'
+      femelleAmoureuse.style.transform='scale(1)'
+      femelleAmoureuse.style.opacity='1'
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
         indicationsContainer.style.display='flex'
@@ -53,6 +55,8 @@ window.addEventListener(
       femelleAmoureuse.style.opacity='1'
       fleche3.style.transform='scale(1)'
       fleche3.style.opacity='1'
+      chimpanzeAmoureux.style.transform='scale(1)'
+      chimpanzeAmoureux.style.opacity='1'
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
         indicationsContainer.style.display='flex'
@@ -79,6 +83,8 @@ window.addEventListener(
       fleche1.style.opacity='1'
       fleche2.style.transform='scale(1.3)'
       fleche2.style.opacity='1'
+      groupe2.style.transform='scale(1)'
+      groupe2.style.opacity='1'
       let apparitionInstruction = setTimeout(apparition, 2000)
       function apparition(){
         indicationsContainer.style.display='flex'
