@@ -5,6 +5,7 @@ const text4 = document.querySelector('#text4')
 const indicationsContainer = document.querySelector('.indicationsContainer')
 const aigle = document.querySelector('.aigle')
 const oiseau = document.querySelectorAll(".oiseau")
+const buttonRetourReplay=document.querySelector('.buttonRetourReplay')
 
 
 let text = 1
@@ -24,13 +25,18 @@ window.addEventListener(
       text4.style.display='none'
       indicationsContainer.style.display='none'
       text++
+      let apparitionInstruction = setTimeout(apparition,2000)
+      function apparition(){
+        buttonRetourReplay.style.width='100%'
+        buttonRetourReplay.style.height='100%'
+      }
     }
     if(text==3 && indicationsContainer.style.display=='flex'){
       aigle.classList.add('animationMoving')
       text3.style.display='none'
       indicationsContainer.style.display='none'
       text4.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,3000)
+      let apparitionInstruction = setTimeout(apparition,2000)
       function apparition(){
         for(let i=0; i<oiseau.length;i++){
           oiseau[i].style.animationDelay=Math.random()*1+'s'
