@@ -501,7 +501,7 @@ a{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 
 .playMusic{
@@ -518,4 +518,98 @@ a{
 *{
   margin:0px;
   padding: 0px;
+}
+
+.buttonNext{
+  margin: 0 auto;
+  margin-top: 6%;
+  border: 4px solid #fbb84d;
+  color: #e58356;
+  width : 150px;
+  height: 50px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 1s;
+  z-index: 3;
+
+  transition-property: color;
+  transition-duration: 1s;
+  animation: textDisparaît 1.6s infinite ease;
+}
+
+.buttonNext:hover{
+  background-color: white;
+  color: black;
+}
+
+@keyframes textDisparaît {
+  0%, 100%{
+    color: black;
+  }
+  50%{
+    color: #e58356;
+  }
+}
+
+.buttonNext2{
+  margin: 0 auto;
+  margin-top: 6%;
+  border: 4px solid white;
+  color: white;
+  width : 150px;
+  height: 50px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 1s;
+  animation: cliqueIci2 1.6s infinite ease;
+  z-index: 3;
+
+}
+
+.buttonNext2:hover{
+  background-color: white;
+}
+
+.buttonNext2 a:hover{
+  color: black;
+}
+
+.buttonNext2 a{
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 1s;
+  animation: textDisparaît2 1.6s infinite ease;
+}
+
+@keyframes textDisparaît2 {
+  0%, 100%{
+    color: black;
+  }
+  50%{
+    color: red;
+  }
+}
+
+@keyframes cliqueIci2 {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
