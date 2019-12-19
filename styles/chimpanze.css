@@ -1,0 +1,246 @@
+body{
+  width : 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background{
+  width: 100%;
+  height: 100%;
+}
+
+#enfant{
+  opacity: 1;
+  transition: all 1s;
+  width : 15%;
+  height: auto;
+  position: absolute;
+  bottom : 23%;
+  left: -4%;
+  z-index: 1;
+}
+
+#enfant2{
+  opacity: 1;
+  transition: all 1s;
+  width : 15%;
+  height: auto;
+  position: absolute;
+  bottom : 33%;
+  left: -9%;
+  z-index: 4;
+}
+
+#enfant3{
+  opacity: 1;
+  transition: all 1s;
+  width : 15%;
+  height: auto;
+  position: absolute;
+  bottom : 52%;
+  left: -8%;
+  z-index: 3;
+}
+
+#kingchimpanze{
+  opacity: 1;
+  transition: all 1s;
+  width : 15%;
+  height: auto;
+  position: absolute;
+  bottom : 48%;
+  left: 7%;
+  z-index: 2;
+}
+
+#malechimpanze{
+  opacity: 1;
+  transition: all 1s;
+  width : 15%;
+  height: auto;
+  position: absolute;
+  bottom : 59%;
+  left: -2%;
+  z-index: 1;
+}
+
+#femellechimpanze{
+  opacity: 1;
+  transition: all 1s;
+  width : 13%;
+  height: auto;
+  position: absolute;
+  bottom : 9%;
+  left: 5%;
+}
+
+#femellechimpanze2{
+  opacity: 1;
+  transition: all 1s;
+  width : 13%;
+  height: auto;
+  position: absolute;
+  bottom : 2%;
+  left: -2%;
+  z-index: 3;
+}
+
+#groupe2{
+  opacity: 1;
+  transition: all 1s;
+  width : 20%;
+  height: auto;
+  position: absolute;
+  bottom : -1%;
+  right : -1%;
+}
+
+#coeur{
+  opacity: 1;
+  transition: all 1s;
+  width :  7%;
+  height: auto;
+  position: absolute;
+  bottom : 30%;
+  right : 48%;
+}
+
+#femelleAmoureuse{
+  opacity: 1;
+  transition: all 1s;
+  width :  13%;
+  height: auto;
+  position: absolute;
+  bottom : 1%;
+  right : 55%;
+  z-index: 4;
+}
+
+#chimpanzeAmoureux{
+  opacity: 1;
+  transition: all 1s;
+  width :  14%;
+  height: auto;
+  position: absolute;
+  bottom : 3%;
+  left: 50%;
+  z-index: 4;
+}
+
+#fleche2{
+  opacity: 0;
+  transition: all 1s;
+  width : 21%;
+  height: auto;
+  position: absolute;
+  bottom : 13%;
+  right: 11%;
+  z-index: 4;
+}
+
+#fleche1{
+  opacity: 0;
+  transition: all 1s;
+  width : 21%;
+  height: auto;
+  position: absolute;
+  bottom : 13%;
+  left: 10%;
+  z-index: 4;
+}
+
+#fleche3{
+  opacity: 0;
+  transition: all 1s;
+  width : 21%;
+  height: auto;
+  position: absolute;
+  bottom : 53%;
+  left: 40%;
+  z-index: 4;
+}
+
+
+
+.textDefile{
+  position: absolute;
+  animation-delay: 1.5s;
+  z-index: 4;
+  width : 60%;
+  left : 25%;
+  color : #fff;
+  opacity: 0;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.animationDefile{
+  animation: animationDefile 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animationDefile {
+  0%{
+    bottom : 72%;;
+    opacity: 0;
+  }
+  100%{
+    bottom : 80%;
+    opacity: 1;
+  }
+}
+
+.indicationsContainer{
+  position: absolute;
+  bottom : 70%;
+  left : 20%;
+  width : 30%;
+  height: 7%;
+  background-color: white;
+  transition: all 4s;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: indicationsOpacity .5s;
+  animation-fill-mode: forwards;
+}
+.indicationsContainer h2{
+  font-size: 18px;
+  color : black;
+}
+
+@keyframes indicationsOpacity {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: .6;
+  }
+}
+
+#soundButton{
+  cursor: pointer;
+  position: absolute;
+  z-index: 200;
+  bottom : 5%;
+  right : 5%;
+}
+#soundButton img{
+  width : 50px;
+  height: 50px;
+}
+
+.audioOff{
+  position: absolute;
+ bottom : 50%;
+  transform: rotate(-45deg);
+  width : 50px;
+  height: 5px;
+  background-color: red;
+  display: block;
+  opacity: .7;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
