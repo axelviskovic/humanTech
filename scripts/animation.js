@@ -21,3 +21,16 @@ if(tab.includes('suricate')){
 if(tab.includes('quelea')){
   sangQuelea.style.display='block'
 }
+
+const buttonAr = document.querySelector('.buttonAr')
+const qrCode = document.querySelector('#qrCode')
+
+buttonAr.addEventListener(
+  'click',
+  ()=>{
+    qrCode.style.display='block'
+    qrCode.style.transition='all 4s'
+    qrCode.style.opacity='1'
+    buttonAr.style.display='none'
+  }
+)

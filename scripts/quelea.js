@@ -10,7 +10,7 @@ const buttonRetourReplay=document.querySelector('.buttonRetourReplay')
 
 let text = 1
 
-const apparitionInstruction = setTimeout(apparition,4000)
+const apparitionInstruction = setTimeout(apparition,2000)
 function apparition(){
   indicationsContainer.style.display='flex'
 }
@@ -25,7 +25,7 @@ window.addEventListener(
       text4.style.display='none'
       indicationsContainer.style.display='none'
       text++
-      let apparitionInstruction = setTimeout(apparition,2000)
+      let apparitionInstruction = setTimeout(apparition,6000)
       function apparition(){
         buttonRetourReplay.style.width='100%'
         buttonRetourReplay.style.height='100%'
@@ -36,7 +36,7 @@ window.addEventListener(
       text3.style.display='none'
       indicationsContainer.style.display='none'
       text4.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,2000)
+      let apparitionInstruction = setTimeout(apparition,1000)
       function apparition(){
         for(let i=0; i<oiseau.length;i++){
           oiseau[i].style.animationDelay=Math.random()*1+'s'
@@ -51,7 +51,7 @@ window.addEventListener(
       text2.style.display='none'
       indicationsContainer.style.display='none'
       text3.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,3000)
+      let apparitionInstruction = setTimeout(apparition,1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -61,7 +61,7 @@ window.addEventListener(
       text1.style.display='none'
       indicationsContainer.style.display='none'
       text2.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,3000)
+      let apparitionInstruction = setTimeout(apparition,1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }

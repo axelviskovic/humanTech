@@ -15,7 +15,7 @@ const buttonRetourReplay=document.querySelector('.buttonRetourReplay')
 
 let text = 1
 
-const apparitionInstruction = setTimeout(apparition,4000)
+const apparitionInstruction = setTimeout(apparition,2000)
 function apparition(){
   indicationsContainer.style.display='flex'
 }
@@ -39,7 +39,7 @@ window.addEventListener(
       text8.classList.add('animationDefile')
       lionnes.style.transform='scale(1)'
       lionnes.style.opacity='.8'
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -51,7 +51,7 @@ window.addEventListener(
       text7.classList.add('animationDefile')
       lionennemi.style.transform='scale(1)'
       lionennemi.style.opacity='0.8'
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -73,7 +73,7 @@ window.addEventListener(
         lionennemi.style.transform='scale(1.5)'
         lionennemi.style.opacity='1'
       }
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -90,7 +90,7 @@ window.addEventListener(
         lionroi.style.transform='scale(1.5)'
         lionroi.style.opacity='1'
       }
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -102,7 +102,7 @@ window.addEventListener(
       text4.classList.add('animationDefile')
       antilope.style.transform='scale(1.5)'
       antilope.style.opacity='1'
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -112,7 +112,7 @@ window.addEventListener(
       text2.style.display='none'
       indicationsContainer.style.display='none'
       text3.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -122,7 +122,7 @@ window.addEventListener(
       text1.style.display='none'
       indicationsContainer.style.display='none'
       text2.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition, 2000)
+      let apparitionInstruction = setTimeout(apparition, 1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }

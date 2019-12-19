@@ -10,11 +10,13 @@ const body=document.querySelector('body')
 const playMusic=document.querySelector('.playMusic')
 const containerPlayMusic=document.querySelector('.containerPlayMusic')
 const musiqueSavane = document.querySelector('#musiqueSavane')
-
+const singeContainer=document.querySelector('#singeContainer')
 
 playMusic.addEventListener(
   'click',
   ()=>{
+    singeContainer.style.display='block'
+    singeContainer.classList.add('animationPop')
     musiqueSavane.play()
     containerPlayMusic.style.display='none'
     elephantContainer.classList.add('animationMoving')
@@ -265,10 +267,6 @@ const audioOff=document.querySelector('.audioOff')
       }
     }
   )
-
-
-
-
 
 
 

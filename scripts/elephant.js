@@ -7,7 +7,7 @@ const indicationsContainer = document.querySelector('.indicationsContainer')
 
 let text = 1
 
-const apparitionInstruction = setTimeout(apparition,4000)
+const apparitionInstruction = setTimeout(apparition,2000)
 function apparition(){
   indicationsContainer.style.display='flex'
 }
@@ -29,7 +29,7 @@ window.addEventListener(
       text3.style.display='none'
       indicationsContainer.style.display='none'
       text4.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,3000)
+      let apparitionInstruction = setTimeout(apparition,1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -39,7 +39,7 @@ window.addEventListener(
       text2.style.display='none'
       indicationsContainer.style.display='none'
       text3.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,3000)
+      let apparitionInstruction = setTimeout(apparition,1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }
@@ -50,7 +50,7 @@ window.addEventListener(
       text1.style.display='none'
       indicationsContainer.style.display='none'
       text2.classList.add('animationDefile')
-      let apparitionInstruction = setTimeout(apparition,3000)
+      let apparitionInstruction = setTimeout(apparition,1000)
       function apparition(){
         indicationsContainer.style.display='flex'
       }

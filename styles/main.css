@@ -125,6 +125,7 @@ body{
 }
 
 #singeContainer{
+  display: none;
   position: absolute;
   width : 10%;
   height: 10%;
@@ -419,6 +420,12 @@ p{
   width: 90%;
 }
 
+.realiteAugmentee{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
 
 .realiteAugmentee img{
   opacity: 0%;
@@ -427,23 +434,26 @@ p{
 .buttonAr{
   margin: 0 auto;
   border: 4px solid #fbb84d;
-  margin-top: -38%;
-  width : 160px;
-  height: 60px;
-  background-color: black;
+  width : 180px;
+  height: 70px;
+  background-color: white;
   border-radius: 20px;
-  font-size: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition-property: background-color;
-  transition-duration: .5s;
-  animation: cliqueIci 3.6s infinite ease;
+  transition-duration: 1s;
+  animation: cliqueIci 1.6s infinite ease;
+  z-index: 3;
 }
 
-.buttonAr:hover{
-  background-color: white;
+
+#qrCode{
+  display: none;
+  width : 240px;
+  height: 240px;
+  opacity: 0;
 }
 
 a:hover{
