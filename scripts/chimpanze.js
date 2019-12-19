@@ -16,6 +16,7 @@ const fleche1 = document.querySelector('#fleche1')
 const fleche2 = document.querySelector('#fleche2')
 const fleche3 = document.querySelector('#fleche3')
 const groupe2 = document.querySelector('#groupe2')
+const buttonRetourReplay=document.querySelector('.buttonRetourReplay')
 
 
 
@@ -32,6 +33,21 @@ function apparition(){
 window.addEventListener(
   'keypress',
   ()=>{
+    if(text==6 && indicationsContainer.style.display=='flex'){
+      text6.style.display='none'
+      text7.classList.add('animationDefile')
+      indicationsContainer.style.display='none'
+      buttonRetourReplay.style.width='100%'
+      buttonRetourReplay.style.height='100%'
+      kingchimpanze.style.transform='scale(1)'
+      kingchimpanze.style.opacity='1'
+      fleche3.style.transform='scale(1)'
+      fleche3.style.opacity='0'
+      fleche1.style.transform='scale(1.3)'
+      fleche1.style.opacity='0'
+      fleche2.style.transform='scale(1.3)'
+      fleche2.style.opacity='0'
+    }
     if(text==5 && indicationsContainer.style.display=='flex'){
       text5.style.display='none'
       text6.classList.add('animationDefile')
