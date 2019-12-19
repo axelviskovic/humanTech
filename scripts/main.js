@@ -7,8 +7,19 @@ const fusilSound = document.querySelector('#fusilSound')
 const fusilEmptySound= document.querySelector('#fusilEmptySound')
 const finalScreen = document.querySelector('.finalScreen')
 const body=document.querySelector('body')
+const playMusic=document.querySelector('.playMusic')
+const containerPlayMusic=document.querySelector('.containerPlayMusic')
+const musiqueSavane = document.querySelector('#musiqueSavane')
+
+
+playMusic.addEventListener(
+  'click',
+  ()=>{
+    musiqueSavane.play()
+    containerPlayMusic.style.display='none'
     elephantContainer.classList.add('animationMoving')
     for(let i=0; i<elementsDecorSavane.length; i++){
+      elementsDecorSavane[i].style.display='block'
       elementsDecorSavane[i].classList.add('animationPop')
     }
     let lionStartMove = setTimeout(lionStart,9000)
@@ -21,6 +32,24 @@ const body=document.querySelector('body')
       oiseauContainer.style.display='block'
       oiseauContainer.classList.add('animationMoving')
     }
+    let waiterFinalScreen=setTimeout(final,30000)
+    function final(){
+      body.style.opacity='1'
+      finalScreen.style.display='flex'
+      localStorage.setItem('animalsKilled',animalsKilled)
+      // Final SCREEN
+
+      const resultatArgent=document.querySelector('#resultatArgent')
+
+      if(animalsKilled.length==0){
+        resultatArgent.innerHTML='<h3>Félicitations, vous avez un coeur en <span class="orange">or</span> et un <span class="red">amour</span> sincère pour les animaux ! À présent vous pouvez voir commnent ces animaux vivent en société.</h3>'
+      }
+      else{
+        resultatArgent.innerHTML='<h3>Bravo, vous avez réussi à récolter <span class="orange">'+argent+'$ </span>en <span class="red">tuant</span> des animaux ! Mais savez-vous comment ces animaux vivent en société ?</h3>'
+      }
+    }
+  }
+)
 
 function emptyGun(){
   fusilEmptySound.play()
@@ -216,11 +245,10 @@ singe.addEventListener(
 
   // SOUND
 
-const musiqueSavane = document.querySelector('#musiqueSavane')
 const soundButton = document.querySelector('#soundButton')
 const audioOff=document.querySelector('.audioOff')
 
-  let musicPlaying=false
+  let musicPlaying=true
 
   soundButton.addEventListener(
     "click",

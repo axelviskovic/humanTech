@@ -74,6 +74,7 @@ body{
   width : 50%;
   height: 50%;
   bottom : -5%;
+  left : -30%;
   z-index: 60;
 }
 
@@ -262,6 +263,7 @@ body{
 }
 
 #nuages{
+  display: none;
   position: absolute;
   width : 100%;
   height: auto;
@@ -270,6 +272,7 @@ body{
 }
 
 #colline{
+  display: none;
   position: absolute;
   width : auto;
   height: 80%;
@@ -280,6 +283,7 @@ body{
 }
 
 #ground{
+  display: none;
   position: absolute;
   width : 100%;
   height: auto;
@@ -289,6 +293,7 @@ body{
 }
 
 #arbre{
+  display: none;
   position: absolute;
   width: auto;
   height: 70%;
@@ -299,6 +304,7 @@ body{
 }
 
 #herbe{
+  display: none;
   position: absolute;
   width: 35%;
   height: auto;
@@ -338,12 +344,12 @@ body{
 
 .audioOff{
   position: absolute;
- bottom : 50%;
+  bottom : 50%;
   transform: rotate(-45deg);
   width : 50px;
   height: 5px;
   background-color: red;
-  display: block;
+  display: none;
   opacity: .7;
 }
 
@@ -472,6 +478,32 @@ a{
   }
 }
 
+.containerPlayMusic{
+  position: absolute;
+  top : 35%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  opacity: .6;
+  z-index: 200;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5%;
+}
+
+.playMusic{
+  width : 30%;
+  height: 30%;
+  background-color: grey;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
 *{
   margin:0px;
